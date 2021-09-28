@@ -1,3 +1,7 @@
-.exemplo {
-  color: darkcyan
+.navbar {
+  background: darkblue !important;
+}
+
+.navbar-brand {
+  color: rgb(231, 243, 243) !important;
 }
