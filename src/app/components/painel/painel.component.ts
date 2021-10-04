@@ -10,7 +10,7 @@ import { FRASE } from './frases.mock';
 export class PainelComponent implements OnInit {
   public frases: Frase[] =FRASE
   public instrucao: string = 'Traduça a frase:'
-  public resposta!: string
+  public resposta: string = ''
   
   public rodada: number= 0
   public rodadaFrase!: Frase
@@ -40,6 +40,8 @@ export class PainelComponent implements OnInit {
       this.progresso += (100 / this.frases.length)
       console.log(this.progresso)
       this.rodadaFrase = this.frases[this.rodada]
+
+      this.resposta = ''
     } else {
       alert('A tradução está incorreta')
     }
