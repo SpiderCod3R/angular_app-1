@@ -6,8 +6,8 @@ import { Coracao } from 'src/app/shared/coracao.model';
   styleUrls: ['./tentativas.component.css']
 })
 export class TentativasComponent implements OnInit {
-  coracao_cheio:string="../assets/coracao_cheio.png"
-  coracao_vazio:string="../assets/coracao_vazio.png"
+  // coracao_cheio:string="../assets/coracao_cheio.png"
+  // coracao_vazio:string="../assets/coracao_vazio.png"
   
   public coracoes: Coracao[] = [
     new Coracao(true), new Coracao(true), new Coracao(true)
