@@ -25,7 +25,6 @@ export class PainelComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log("O componente foi destruido");
   }
 
   ngOnInit(): void {
@@ -37,7 +36,6 @@ export class PainelComponent implements OnInit, OnDestroy {
 
   public verificarResposta(): void {
     if (this.rodadaFrase.frasePtBr.toUpperCase == this.resposta.toUpperCase) {
-      alert('A tradução está correta')
       this.rodada++
       this.progresso += (100 / this.frases.length)
       if (this.rodada === 4) {
