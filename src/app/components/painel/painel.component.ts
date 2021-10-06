@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, OnDestroy } from '@angular/core';
 import { Frase } from 'src/app/shared/frase.model';
 import { FRASE } from './frases.mock';
 
@@ -7,7 +7,7 @@ import { FRASE } from './frases.mock';
   templateUrl: './painel.component.html',
   styleUrls: ['./painel.component.css']
 })
-export class PainelComponent implements OnInit {
+export class PainelComponent implements OnInit, OnDestroy {
   public frases: Frase[] =FRASE
   public instrucao: string = 'Traduça a frase:'
   public resposta: string = ''
@@ -22,6 +22,11 @@ export class PainelComponent implements OnInit {
 
   constructor() { 
     this.atualizaRodada()
+  }
+
+  ngOnDestroy(): void {
+    console.log("O componente foi destruido");
+    
   }
 
   ngOnInit(): void {
